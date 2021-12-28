@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+.container-chat {
+    display: flex;
+    width: 50vw;
+    height: 100vh;
+    background-color: lightgreen;
+}
+
+.container-users {
+    background-color: lightseagreen;
+    width: 30%;
+}
+
+.container-messages {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.contact-messag {
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    align-self: flex-end;
+    width: 50%;
+    background-color: rgb(221, 128, 240);
+    margin: 5px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.right {
+    align-self: flex-start;
+    width: 50%;
+    background-color: lightcoral;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.input-message {
+    width: 80%;
+}
+
+.container-input {
+    width: 100%;
+    display: flex;
+    padding-bottom: 5px;
+}
+
+.button-send-message {
+    border: none;
+    background-color: rgb(11, 178, 184);
+    width: 20%;
+}
+
+.item-message {
+    list-style-type: none;
+}
+
+.item-user-chat {
+    list-style-type: none;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.list {
+    margin: 10px 5px 30px 5px;
+    padding-left: 5px;
+}
+
+.msg-date {
+    text-align: end;
+    font-size: 14px;
+    color: navy;
+}
+
+.sender-name {
+    color: green;
+}
+
+.text-msg {
+    color: red;
+    margin: 5px;
+    text-align: center;
+}
