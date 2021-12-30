@@ -3,7 +3,8 @@ import UserModel from "./user.model";
 import ("./user.css");
 
 export default class UserController {
-    static API = "https://jsonplaceholder.typicode.com";
+    // static API = "https://jsonplaceholder.typicode.com";
+    static API = "https://quiet-chamber-08369.herokuapp.com";
     static ENVIRONMENT = {
         USERS: {
             getUsers: "/users",
@@ -11,7 +12,6 @@ export default class UserController {
     };
 
     constructor($container) {
-        //console.log('user', $container)
         this.$container = $container;
         this.userModel = new UserModel(UserController.API + UserController.ENVIRONMENT.USERS.getUsers);
 
@@ -23,6 +23,7 @@ export default class UserController {
         });
         this.userModel.getListItems().then(() => this.initViewRender());
         this.userView.createUserCreateContainer(this.$container);
+
     };
 
     getContainer() {

@@ -30,9 +30,7 @@ export default class UserView {
     id = 0;
     isEnter = true;
     newUser = null;
-
-
-
+    
     constructor(options) {
         this.options = options;
         this.$ListContainerEl =
@@ -48,7 +46,7 @@ export default class UserView {
     };
 
     renderList(newUser) {
-        //const listHtml = list.map(item => this.createItemHtml(item)).join('');
+        // const listHtml = list.map(item => this.createItemHtml(item)).join('');
         const listHtml = this.createItemHtml(newUser);
         this.$ListContainerEl.html(listHtml)
     };

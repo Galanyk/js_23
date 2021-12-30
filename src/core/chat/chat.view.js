@@ -53,8 +53,9 @@ export default class ChatView {
     };
 
     createUserList() {
-        this.userContainer.forEach(element => {
-            $('.list').append(this.createUser(element.name, element.id));
+        console.log('this.userContainer',this.userContainer.users)
+        this.userContainer.users.forEach(element => {
+            $('.list').append(this.createUser(element.firstName, element._id));
         });
     };
 
@@ -105,15 +106,16 @@ export default class ChatView {
     createReturnMessage(message) {
         this.direction > 0.5 ? this.displaySideClassName = 'right' : this.displaySideClassName = 'left';
         $(`.${ChatView.CLASSES.CONTACT_MESSAG}`).append(`<div class="${ChatView.CLASSES.CONTAINER_MESSAGE} ${this.displaySideClassName}">
-                    <div class="${ChatView.CLASSES.SEND_NAME}">${this.userContainer[Math.floor(Math.random() * 10)].name}</div>
+                    <div class="${ChatView.CLASSES.SEND_NAME}">${this.userContainer.users[Math.floor(Math.random() * 10)].firstName}</div>
                     <div class="${ChatView.CLASSES.ITEM_MESSAGE}">${message}</div>
                     <div class="${ChatView.CLASSES.MESSAGE_DATE}">${new Date().toLocaleTimeString()}</div>
                 </div>`);
     };
 
     onUserClick(e) {
-        this.message.name = this.userContainer.filter((element) => {
-            return element.id === +e.target.id
-        })[0].name
+        console.log('e', e.target.id)
+        this.message.name = this.userContainer.users.filter((element) => {
+            return element._id === e.target.id
+        })[0].firstName
     };
 }

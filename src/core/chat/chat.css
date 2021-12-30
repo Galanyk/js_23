@@ -4,19 +4,19 @@
 
 .container-chat {
     display: flex;
-    width: 50vw;
+    width: 70vw;
     height: 100vh;
     background-color: lightgreen;
 }
 
 .container-users {
     background-color: lightseagreen;
-    width: 30%;
+    width: 40%;
 }
 
 .container-messages {
     display: flex;
-    width: 70%;
+    width: 60%;
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
