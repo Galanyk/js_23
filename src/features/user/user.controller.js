@@ -3,7 +3,6 @@ import UserModel from "./user.model";
 import ("./user.css");
 
 export default class UserController {
-    // static API = "https://jsonplaceholder.typicode.com";
     static API = "https://quiet-chamber-08369.herokuapp.com";
     static ENVIRONMENT = {
         USERS: {
@@ -27,7 +26,6 @@ export default class UserController {
     };
 
     getContainer() {
-        // console.log("user controller get Container");
         return this.userModel.getContainer();
     }
 

@@ -33,7 +33,6 @@ export default class ChatView {
     };
 
     id = 0;
-    // $userList = null;
     displaySideClassName = null;
     direction = 0;
 
@@ -53,7 +52,6 @@ export default class ChatView {
     };
 
     createUserList() {
-        console.log('this.userContainer',this.userContainer.users)
         this.userContainer.users.forEach(element => {
             $('.list').append(this.createUser(element.firstName, element._id));
         });
@@ -113,7 +111,6 @@ export default class ChatView {
     };
 
     onUserClick(e) {
-        console.log('e', e.target.id)
         this.message.name = this.userContainer.users.filter((element) => {
             return element._id === e.target.id
         })[0].firstName
